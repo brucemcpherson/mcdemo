@@ -1,0 +1,16 @@
+{
+  "name": "mcdemo",
+  "version": "1.0.0",
+  "description": "memcache kubernetes demo",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "bruce mcpherson",
+  "license": "MIT"
+}
