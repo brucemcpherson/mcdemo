@@ -1,0 +1,2 @@
+# mcdemo
+kubernetes memcache demo
