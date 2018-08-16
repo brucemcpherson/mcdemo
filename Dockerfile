@@ -7,7 +7,7 @@ COPY src /src
 COPY package.json /
 
 # secrets file needs to be resident locally
-COPY private/secrets.js /
+COPY ../private/secrets.js /
 
 #install the dependencies
 RUN npm install
