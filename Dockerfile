@@ -12,6 +12,7 @@ COPY ../private/secrets.js /
 #install the dependencies
 RUN npm install
 
+#test
 #expose port
 EXPOSE 8081
 
