@@ -2,17 +2,17 @@
 FROM alpine
 
 ## copy the source
-COPY index.js /
-COPY src /src
-COPY package.json /
+COPY index.js .
+COPY src .
+COPY package.json .
 
-# secrets file needs to be resident locally
-COPY ../private/secrets.js /
+# secrets file is  resident locally
+COPY private/* .
 
 #install the dependencies
 RUN npm install
 
-#test
+
 #expose port
 EXPOSE 8081
 
