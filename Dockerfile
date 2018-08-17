@@ -7,11 +7,11 @@ WORKDIR /usr/src/mcdemo
 
 ## copy the source
 COPY index.js .
-COPY src .
+COPY src/ src/
 COPY package.json .
 
 # secrets file needs to be resident locally
-COPY private/* .
+COPY private/* src/
 
 #install the dependencies
 RUN npm install
