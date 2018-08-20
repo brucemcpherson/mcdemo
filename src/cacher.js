@@ -9,6 +9,7 @@ module.exports = ((ns) => {
     // possible that memcached not supported
     const host = secrets.memcached[mode].host;
     ns.client = host ? memjs.Client.create(host) : null;
+
     // to seperate caches in different environments
     ns.silo = secrets.memcached[mode].silo;
     ns.verbose = secrets.memcached[mode].verbose;
@@ -67,7 +68,7 @@ module.exports = ((ns) => {
 
     // normalize the key
     const hashKey = ns.getKey(key);
-
+    console.log('in put');
     // set it
     return new Promise((resolve, reject) => {
 
@@ -176,6 +177,7 @@ module.exports = ((ns) => {
       expires = secrets.memcached.maxExpires;
     }
     return { expires };
+
   };
 
   // standardize getting a key to use

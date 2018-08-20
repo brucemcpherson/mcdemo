@@ -20,3 +20,4 @@ routing.init(app);
 
 // start the server
 app.listen(port, ip);
+module.exports = app;
