@@ -9,7 +9,7 @@ module.exports = ((ns) => {
             verbose: true,
         },
         ku: {
-            host: 'mcrouter-demo-mcrouter.default.svc.cluster.local:11211',
+            host: 'mcrouter-demo-mcrouter.default.svc.cluster.local:5000',
             silo: 'mcdemo@mcpher.com',
             verbose: false
         }
