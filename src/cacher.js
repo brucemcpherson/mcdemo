@@ -8,8 +8,9 @@ module.exports = ((ns) => {
   ns.init = (mode) => {
     // possible that memcached not supported
     const host = secrets.memcached[mode].host;
+    console.log("connecting to cache host", host);
     ns.client = host ? memjs.Client.create(host) : null;
-
+    console.log("connected cache");
     // to seperate caches in different environments
     ns.silo = secrets.memcached[mode].silo;
     ns.verbose = secrets.memcached[mode].verbose;
@@ -27,7 +28,7 @@ module.exports = ((ns) => {
 
     // get it
     return new Promise((resolve, reject) => {
-
+      console.log("getting from cache");
       ns.client.get(hashKey, (err, val) => {
         if (err) {
           reject(err);
