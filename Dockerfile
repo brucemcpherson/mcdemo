@@ -10,8 +10,6 @@ COPY index.js .
 COPY src/ src/
 COPY package.json .
 
-# secrets file needs to be resident locally
-COPY private/* src/
 
 #install the dependencies
 RUN npm install
